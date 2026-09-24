@@ -13,14 +13,14 @@ const Banner = () => {
     />
     <div>
 
-        <p>WORKOUT LIBRAR</p>
+        <p className='text-lime-300 py-6'>WORKOUT LIBRARY</p>
       <h1 className="text-5xl font-bold">TRAIN WITH INTENT. LOG <br />
 EVERY SET.</h1>
-      <p className="py-6">
-       FitLog is a dark, no-nonsense gym companion: pick a lift, lock it
+      <p className="py-6 text-gray-500">
+       FitLog is a dark, no-nonsense gym companion: pick a lift,  lock it 
 into today's plan, and watch the week's work add up.
       </p>
-      <button className="btn btn-primary">BROWSE WORKOUTS</button>
+      <button className="btn btn-primary bg-lime-300 text-gray-900 font-bold">BROWSE WORKOUTS</button>
     </div>
   </div>
 </div>

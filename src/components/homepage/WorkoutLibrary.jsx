@@ -1,30 +1,54 @@
-import React from 'react';
+
+
 import WorkCard from './shared/WorkCard';
 
-const WorkoutLibrary = async() => {
+const getWorks = async () => {
+  const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
 
-    const workData = await fetch('https://api.abcz.workers.dev/api/fitlog');
-    const works = await workData.json();
-    return (
-        <div>
-            {
-                works.map(work => <WorkCard key={work.id} work={work}></WorkCard>)
-            }
-        </div>
-    );
+  if (!res.ok) {
+    throw new Error("Failed to fetch workouts");
+  }
+
+  return res.json();
+};
+
+const WorkoutLibrary = async () => {
+  const works = await getWorks();
+
+  return (
+   
+    
+
+         <main className="mx-auto max-w-7xl px-5 py-10">
+
+      {/* Header */}
+      <div className="mb-10 text-start">
+        <h1 className="text-4xl font-bold">
+         THE LIBRARY
+        </h1>
+
+        <p className="mt-3 text-base-content/60">
+         Twelve lifts covering every major muscle group.
+        </p>
+      </div>
+
+      {/* Workout Cards */}
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {works.map((work) => (
+          <WorkCard
+            key={work.id}
+            work={work}
+          />
+        ))}
+      </div>
+
+    </main>
+
+    
+
+
+   
+  );
 };
 
 export default WorkoutLibrary;
-
-
-// export default async function Page() {
-//   const data = await fetch('https://api.vercel.app/blog')
-//   const posts = await data.json()
-//   return (
-//     <ul>
-//       {posts.map((post) => (
-//         <li key={post.id}>{post.title}</li>
-//       ))}
-//     </ul>
-//   )
-// }
