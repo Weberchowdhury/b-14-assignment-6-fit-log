@@ -16,24 +16,27 @@ const WorkoutLibrary = async () => {
   const works = await getWorks();
 
   return (
-   
-    
 
-         <main className="mx-auto max-w-7xl px-5 py-10">
+
+
+    <main className="mx-auto max-w-7xl px-5 py-10">
 
       {/* Header */}
       <div className="mb-10 text-start">
         <h1 className="text-4xl font-bold">
-         THE LIBRARY
+          THE LIBRARY
         </h1>
 
         <p className="mt-3 text-base-content/60">
-         Twelve lifts covering every major muscle group.
+          Twelve lifts covering every major muscle group.
         </p>
       </div>
 
       {/* Workout Cards */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+
+
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {works.map((work) => (
           <WorkCard
             key={work.id}
@@ -44,10 +47,10 @@ const WorkoutLibrary = async () => {
 
     </main>
 
-    
 
 
-   
+
+
   );
 };
 
