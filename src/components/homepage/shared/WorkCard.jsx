@@ -28,7 +28,7 @@ const WorkCard = ({ work }) => {
           {work.muscleGroups.map((muscle) => (
             <span
               key={muscle}
-              className="rounded-full bg-lime-300 px-4 py-2 text-xs font-bold text-gray-900"
+              className="rounded-full bg-lime-300 px-4 py-2 text-xs font-bold text-gray-900 uppercase"
             >
               {muscle}
             </span>
@@ -36,7 +36,7 @@ const WorkCard = ({ work }) => {
         </div>
 
         {/* Name */}
-        <h2 className="mt-4 text-2xl font-bold text-base-content">
+        <h2 className="mt-4 text-2xl font-bold text-base-content uppercase">
           {work.name}
         </h2>
 

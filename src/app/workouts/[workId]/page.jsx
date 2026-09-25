@@ -3,15 +3,6 @@ import Image from 'next/image';
 import React from 'react';
 
 
-
-
-
-
-
-
-
-
-
 const getWorks = async () => {
     const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
 
@@ -56,7 +47,7 @@ const WorkoutDetailsPage = async ({ params }) => {
                 <div className="p-6 lg:p-8">
 
                     {/* Name */}
-                    <h1 className="text-4xl font-bold">
+                    <h1 className="text-4xl font-bold uppercase">
                         {work.name}
                     </h1>
 
@@ -67,8 +58,7 @@ const WorkoutDetailsPage = async ({ params }) => {
 
                     {/* Muscle Groups */}
                     <div className="mt-5">
-                        <p className="font-semibold">Muscle Groups</p>
-
+                      
                         <div className="mt-2 flex flex-wrap gap-2">
                             {work.muscleGroups.map((muscle) => (
                                 <span
@@ -85,37 +75,37 @@ const WorkoutDetailsPage = async ({ params }) => {
                     <div className="mt-6">
 
                         <div className="flex justify-between border-b border-gray-700 py-3">
-                            <span className="font-semibold">Equipment</span>
+                            <span className="font-semibold">EQUIPMENT</span>
                             <span>{work.equipment}</span>
                         </div>
 
                         <div className="flex justify-between border-b border-gray-700 py-3">
-                            <span className="font-semibold">Difficulty</span>
+                            <span className="font-semibold"> DIFFICULTY</span>
                             <span>{work.difficulty}</span>
                         </div>
 
                         <div className="flex justify-between border-b border-gray-700 py-3">
-                            <span className="font-semibold">Sets</span>
+                            <span className="font-semibold"> SETS</span>
                             <span>{work.sets}</span>
                         </div>
 
                         <div className="flex justify-between border-b border-gray-700 py-3">
-                            <span className="font-semibold">Reps</span>
+                            <span className="font-semibold">REPS</span>
                             <span>{work.reps}</span>
                         </div>
 
                         <div className="flex justify-between border-b border-gray-700 py-3">
-                            <span className="font-semibold">Duration</span>
+                            <span className="font-semibold"> DURATION</span>
                             <span>{work.duration} min</span>
                         </div>
 
                         <div className="flex justify-between border-b border-gray-700 py-3">
-                            <span className="font-semibold">Calories</span>
+                            <span className="font-semibold">CALORIES</span>
                             <span>{work.caloriesBurned} kcal</span>
                         </div>
 
                         <div className="flex justify-between border-b border-gray-700 py-3">
-                            <span className="font-semibold">Rating</span>
+                            <span className="font-semibold">RATING</span>
                             <span>⭐ {work.rating}</span>
                         </div>
 
@@ -124,7 +114,7 @@ const WorkoutDetailsPage = async ({ params }) => {
                     {/* Instructions */}
                     <div className="mt-7">
                         <h2 className="text-2xl font-bold">
-                            Instructions
+                            INSTRUCTIONS
                         </h2>
 
                         <ol className="mt-4 space-y-3">
