@@ -1,18 +1,25 @@
-import Banner from '@/components/homepage/Banner';
-import Footar from '@/components/homepage/Footar';
-import WorkoutLibrary from '@/components/homepage/WorkoutLibrary';
-import Navbar from '@/components/Navbar';
-import React from 'react';
+import Hero from "@/components/homepage/Hero";
+import WorkoutLibrary from "@/components/homepage/WorkoutLibrary";
 
 const HomePage = () => {
   return (
-    <div>
-      
-      <Banner></Banner>
-      <WorkoutLibrary></WorkoutLibrary>
-      
-    </div>
+    <>
+      <Hero />
+
+      <section id="library">
+        <WorkoutLibrary />
+      </section>
+    </>
   );
 };
 
+
+
 export default HomePage;
+  
+  
+  
+  
+  
+    
+

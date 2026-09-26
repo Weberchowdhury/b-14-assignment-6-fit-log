@@ -2,6 +2,7 @@
 import AddToTodayBtn from '@/components/bookdetails/AddToTodayBtn';
 import SaveForLaterBtn from '@/components/bookdetails/SaveForLaterBtn';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import React from 'react';
 
 
@@ -25,7 +26,7 @@ const WorkoutDetailsPage = async ({ params }) => {
     );
 
     if (!work) {
-        return <div>Workout not found</div>;
+        notFound();
     }
 
     return (
