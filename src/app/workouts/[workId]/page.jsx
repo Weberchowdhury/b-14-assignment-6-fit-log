@@ -1,4 +1,6 @@
 
+import AddToTodayBtn from '@/components/bookdetails/AddToTodayBtn';
+import SaveForLaterBtn from '@/components/bookdetails/SaveForLaterBtn';
 import Image from 'next/image';
 import React from 'react';
 
@@ -132,14 +134,9 @@ const WorkoutDetailsPage = async ({ params }) => {
                     {/* Buttons */}
                     <div className="mt-8 grid grid-cols-2 gap-3">
 
-                        <button className="btn btn-primary">
-                            ➕ Add to today's plan
-                        </button>
+                       <AddToTodayBtn work={work}></AddToTodayBtn>
 
-                        <button className="btn btn-outline">
-                            🔖 Save for later
-                        </button>
-
+                        <SaveForLaterBtn work={work}></SaveForLaterBtn>
                     </div>
 
                 </div>
